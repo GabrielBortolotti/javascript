@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(48, 138, 240);
+            font: normal 18pt Arial;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Iniciando estudos com o DOM</h1>
+    <p id="p1">Aqui vai o resultado</p>
+    <p id="p2">Aprendendo a usar o <strong>DOM</strong> em JS</p>
+    <div id="msg">Clique em mim</div>
+
+
+    <script>
+        var corpo = document.body;
+
+        //Seleciona o paragrafo (p) com o indíce 0 (primeiro paragrafo)
+        var p1 = window.document.getElementsByTagName('p')[0]; 
+
+        //Seleciona o elemento por ID
+        var d = document.getElementById('msg');
+
+        //Seleciona por seletor (modelo 'tag#id' ou 'tag.classe')
+        var p2 = document.querySelector('p#p2');
+
+        window.document.writeln(`${p1.innerText.toUpperCase()} <br>`);
+        d.style.background = 'green';
+        p2.style.color = 'yellow';
+    </script>
+</body>
+</html>
